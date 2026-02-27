@@ -1,0 +1,349 @@
+.create-wrapper {
+  padding: 32px 40px;
+  color: #e2e8f0;
+  font-family: Inter, sans-serif;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.page-sub {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+.create-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start; 
+}
+
+/* LEFT CARD */
+.left-card {
+  background: linear-gradient(145deg,#0f172a,#111827);
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.left-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-sub {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+.input-label {
+  font-size: 13px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.lecture-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  background: #0b1220;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  color: #e2e8f0;
+  outline: none;
+}
+
+.lecture-input:focus {
+  border: 1px solid #7c3aed;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  font-size: 13px;
+  background: #0b1220;
+  border: none;
+  color: #94a3b8;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+}
+
+.tab.active {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+/* Upload Box */
+.upload-box {
+  margin-top: 20px;
+  padding: 42px;
+  border: 1px dashed #334155;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.upload-box span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* RIGHT CARD */
+.right-card {
+  background: linear-gradient(145deg,#0f172a,#111827);
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.right-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.select-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 13px;
+  margin: 8px 0 18px 0;
+  background: #0b1220;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  color: #e2e8f0;
+}
+
+.slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+.notes-area {
+  margin-top: 20px;
+  width: 100%;
+  min-height: 250px;
+  padding: 16px;
+  font-size: 14px;
+  background: #0b1220;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  color: #e2e8f0;
+  resize: none;
+}
+
+.notes-area:focus {
+  border: 1px solid #7c3aed;
+}
+
+.pro-tips {
+  margin-top: 20px;
+  background: linear-gradient(145deg,#0f172a,#111827);
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.pro-tips h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.pro-tips ul {
+  padding-left: 16px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.pro-tips li {
+  margin-bottom: 8px;
+}
+
+/* ========================= */
+/* PDF Upload Box Effect */
+/* ========================= */
+
+./* ========================= */
+/* Upload Box Hover Effect */
+/* ========================= */
+
+.upload-box {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.upload-box:hover {
+  border: 2px dashed #7c3aed;
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+}
+
+/* Remove blinking animation completely */
+@keyframes pdfBlink {
+  from { }
+  to { }
+}
+
+/* ========================= */
+/* Notes & Code Textarea Fix */
+/* ========================= */
+
+.notes-area {
+  outline: none;              /* 🔥 remove white border */
+}
+
+.notes-area:focus {
+  outline: none;              /* 🔥 remove browser white border */
+  border: 2px solid #7c3aed;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+}
+
+.file-uploaded {
+  border: 2px solid #7c3aed !important;
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+}
+
+.uploaded-text {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.file-name {
+  font-size: 13px;
+  color: #a855f7;
+}
+
+.disabled-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+
+  .create-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right-card {
+    margin-top: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .create-wrapper {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .left-card,
+  .right-card,
+  .pro-tips {
+    padding: 20px;
+  }
+
+  .notes-area {
+    min-height: 200px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .page-sub {
+    font-size: 13px;
+  }
+
+  .generate-btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.success-card {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+  text-align: center;
+  color: #22c55e;
+  font-weight: 500;
+}

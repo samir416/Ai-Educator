@@ -1,0 +1,116 @@
+.settings-wrapper {
+  min-height: 100vh;
+  background: #0B1120;
+  color: #f1f5f9;
+}
+
+.settings-topbar {
+  padding: 30px 50px 0 50px;
+}
+
+.settings-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.settings-back:hover {
+  background: #1e293b;
+}
+
+.settings-container {
+  padding: 40px 50px;
+  max-width: 850px;
+}
+
+.settings-header h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.settings-header p {
+  color: #94a3b8;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.settings-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 25px;
+}
+
+.settings-card h3 {
+  font-size: 16px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #1f2937;
+  font-size: 14px;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.field select {
+  width: 100%;
+  padding: 10px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+}
+
+.btn-primary {
+  padding: 8px 16px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.danger {
+  border: 1px solid #3f1d1d;
+}
+
+.btn-danger {
+  padding: 8px 16px;
+  background: #dc2626;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}

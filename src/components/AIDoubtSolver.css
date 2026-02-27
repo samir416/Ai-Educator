@@ -1,0 +1,338 @@
+.ai-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 35px;   /* thoda compact */
+  background: linear-gradient(180deg, #0b0f2a, #050816);
+  color: white;
+  overflow: hidden;   /* page scroll band */
+}
+
+
+.ai-header {
+  margin-bottom: 20px;
+}
+
+
+.ai-header h2 {
+  font-size: 24px;   /* pehle 28px tha */
+  margin-bottom: 4px;
+}
+
+.ai-header p {
+  font-size: 14px;
+  margin-bottom: 15px;   /* pehle 30px tha */
+  color: #94a3b8;
+}
+
+
+/* CHAT BOX */
+
+.chat-box {
+  background: #0f172a;
+  border: 1px solid rgba(100, 100, 255, 0.15);
+  border-radius: 20px;
+  height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.chat-messages {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* MESSAGE */
+
+.message {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.message.bot {
+  align-items: flex-start;
+}
+
+.bot-icon {
+  background: #1e293b;
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.bubble {
+  background: #1e293b;
+  padding: 14px 18px;
+  border-radius: 15px;
+  max-width: 70%;
+  position: relative;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.user .bubble {
+  background: #4f46e5;
+}
+
+.time {
+  font-size: 11px;
+  display: block;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+
+/* INPUT */
+
+.chat-input {
+     position: sticky;
+  bottom: 0;
+  background: #0f172a;
+  display: flex;
+  padding: 18px;
+  border-top: 1px solid rgba(100, 100, 255, 0.15);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #4f46e5;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-input button {
+  margin-left: 12px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 14px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .ai-page {
+    padding: 15px;
+    min-height: 100dvh;  /* important */
+  }
+
+  .chat-box {
+    height: 60dvh;
+    border-radius: 16px;
+  }
+
+
+  .chat-messages {
+    padding: 12px;
+  }
+
+  .bubble {
+    font-size: 13px;
+  }
+}
+
+
+/* ================= HISTORY PAGE ================= */
+
+.history-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b0f2a, #050816);
+  color: white;
+  padding: 30px 40px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.clear-btn {
+  background: #dc2626;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  background: #0f172a;
+  padding: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid #1e293b;
+}
+
+.history-item:hover {
+  background: #1e293b;
+}
+
+.no-history {
+  color: #94a3b8;
+}
+
+.back-btn {
+  margin-top: 30px;
+  background: #4f46e5;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* History icon button */
+.history-icon-btn {
+  background: transparent;
+  border: 1px solid #4f46e5;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== HISTORY PAGE ===== */
+/* ===== MODERN HISTORY PAGE ===== */
+
+.history-wrapper {
+  min-height: 100vh;
+  background: #0b1220;
+  padding: 50px;
+  color: #f1f5f9;
+}
+
+.history-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.history-header h2 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.history-back,
+.history-clear {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.history-back {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+
+.history-back:hover {
+  background: #1e293b;
+}
+
+.history-clear {
+  background: #dc2626;
+  color: white;
+}
+
+.history-clear:hover {
+  background: #b91c1c;
+}
+
+.history-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111827;
+  border: 1px solid #1f2937;
+  padding: 18px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.history-card:hover {
+  background: #1e293b;
+}
+
+.history-title {
+  cursor: pointer;
+  flex: 1;
+}
+
+.delete-single {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-single:hover {
+  color: #dc2626;
+}
+
+.history-new {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.history-clear {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.no-history {
+  color: #94a3b8;
+}
+
+.history-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.history-new {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.history-new:hover {
+  background: #1d4ed8;
+}
