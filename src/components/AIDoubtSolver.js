@@ -32,38 +32,32 @@ export default function AIDoubtSolver() {
         setSessions(updated);
     };
 
-    const sendMessage = () => {
-        if (!input.trim()) return;
+const [isLoading, setIsLoading] = useState(false); // Add this at the top
 
-        const newMessage = {
-            text: input,
-            sender: "user",
-            time: new Date().toLocaleTimeString()
-        };
+const sendMessage = async () => {
+    if (!input.trim()) return;
 
-        const updatedMessages = [...messages, newMessage];
-        setMessages(updatedMessages);
+    const userMsg = { text: input, sender: "user", time: new Date().toLocaleTimeString() };
+    setMessages(prev => [...prev, userMsg]);
+    setInput("");
+    setIsLoading(true); // Start loading
 
-        if (!currentSessionId) {
-            const newSession = {
-                id: Date.now(),
-                title: input.slice(0, 40),
-                messages: updatedMessages
-            };
-            const updatedSessions = [newSession, ...sessions];
-            saveSessions(updatedSessions);
-            setCurrentSessionId(newSession.id);
-        } else {
-            const updatedSessions = sessions.map(session =>
-                session.id === currentSessionId
-                    ? { ...session, messages: updatedMessages }
-                    : session
-            );
-            saveSessions(updatedSessions);
-        }
+    try {
+        const response = await fetch("http://localhost:8080/api/ai/solve", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question: input })
+        });
 
-        setInput("");
-    };
+        const data = await response.json();
+        const botMsg = { text: data.answer, sender: "bot", time: new Date().toLocaleTimeString() };
+        setMessages(prev => [...prev, botMsg]);
+    } catch (error) {
+        console.error("Error:", error);
+    } finally {
+        setIsLoading(false); // Stop loading
+    }
+};
 
     const openSession = (session) => {
         setMessages(session.messages);
