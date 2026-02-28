@@ -189,17 +189,6 @@ public class VideoController {
         return nameWithoutExtension + extension;
     }
 
-    private void validatePdfPageLimit(MultipartFile file) throws Exception {
-
-        PDDocument document = PDDocument.load(file.getInputStream());
-        int totalPages = document.getNumberOfPages();
-        document.close();
-
-        if (totalPages > 20) {
-            throw new RuntimeException("PDF exceeds maximum allowed limit of 20 pages.");
-        }
-    }
-
     private String generateDeepLecture(String content, int targetMinutes) {
 
         int targetWordCount = targetMinutes * 150;

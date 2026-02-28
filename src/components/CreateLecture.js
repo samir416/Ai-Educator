@@ -113,7 +113,7 @@ export default function CreateLecture() {
         formData.append("file", file);
       }
 
-      formData.append("duration", duration);
+    formData.append("duration", duration || "SHORT");
 
       const res = await fetch("http://localhost:8080/api/generate", {
         method: "POST",
@@ -358,6 +358,21 @@ export default function CreateLecture() {
         </div>
 
       </div>
+{/* 1. Hidden Audio (This makes the voice play) */}
+<audio ref={audioRef} />
+
+{/* 2. Video Player (This shows the .mp4 files I saw in your folder) */}
+{apiResponse && apiResponse.videoPath && apiResponse.videoPath !== "FAILED" && (
+  <div className="video-display-section" style={{ marginTop: '20px' }}>
+    <h3 style={{ color: 'white' }}>Your AI Lecture Video:</h3>
+    <video 
+      width="100%" 
+      controls 
+      key={apiResponse.videoPath}
+      src={`http://localhost:8080/generated_files/${apiResponse.videoPath}`}
+    />
+  </div>
+)}
     </div>
   );
 }
